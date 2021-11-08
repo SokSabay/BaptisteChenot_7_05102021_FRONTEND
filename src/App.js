@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Routes from "./components/Routes";
 import { UidContext } from "./components/AppContext";
 import axios from "axios";
-
 const App = () => {
   const [uid, setUid] = useState(null);
 

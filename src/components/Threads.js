@@ -1,14 +1,13 @@
-
-import axios from 'axios';
+import axios from "axios";
 import React from "react";
-import Card from './Post/card';
+import Card from "./Post/card";
 // import { Link } from 'react-router-dom';
 
-
-const baseURL =  `${process.env.REACT_APP_API_URL}api/posts`;
+const baseURL = `${process.env.REACT_APP_API_URL}api/posts`;
 
 export default function Threads() {
   const [post, setPost] = React.useState(null);
+
 
   React.useEffect(() => {
     axios.get(baseURL).then((response) => {
@@ -26,9 +25,8 @@ export default function Threads() {
       <div className="thread-container">
         <ul>
           {post.map((post) => {
-          return <Card post={post} key={post.id} />
-             })
-            }
+            return <Card post={post} key={post.id} />
+          })}
         </ul>
       </div>
     </>
@@ -71,11 +69,11 @@ export default function Threads() {
 
 // export default Threads;
 
-          // {
-          //   post.map((post) => (
-          //     <div>
-          //       <h2>{post.title}</h2>
-          //       <img src={post.attachment} alt="funny GIF" width="" />
-          //     </div>
-          //   ));
-          // }
+// {
+//   post.map((post) => (
+//     <div>
+//       <h2>{post.title}</h2>
+//       <img src={post.attachment} alt="funny GIF" width="" />
+//     </div>
+//   ));
+// }

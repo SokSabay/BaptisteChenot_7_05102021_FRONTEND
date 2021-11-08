@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-d
 import Home from "../../pages/Home";
 // import NotFound from "../../pages/NotFound";
 import Profil from "../../pages/Profil";
-import Trending from "../../pages/Trending";
 import Navbar from "../Navbar";
 
 const index = () => {
@@ -13,7 +12,6 @@ const index = () => {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/profil" exact component={Profil} />
-        <Route path="/trending" exact component={Trending} />
         <Redirect to="/" />
         {/* <Route component={NotFound} /> */}
       </Switch>
